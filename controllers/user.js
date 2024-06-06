@@ -18,7 +18,7 @@ export const getMyProfile =  (req, res) => {
 };
 
 export const register = async (req, res) => {
-  try {
+ 
     const { name, email, password } = req.body;
     let user = await data.findOne({ email });
   
@@ -38,9 +38,7 @@ export const register = async (req, res) => {
       sendCookie(user, res, "Registered", 201);
     }
   
-  } catch (error) {
-    next(error);
-  }
+  
 };
 
 export const login = async (req, res) => {
