@@ -20,8 +20,8 @@ Make sure you have the following installed on your machine:
 1. Clone the repository:
 
     ```sh
-    git clone 
-    cd nodejs-todo-app
+    git clone https://github.com/Mayanksaini1234/NodeJS_ToDo
+  p
     ```
 
 2. Install dependencies:
