@@ -36,3 +36,9 @@ Make sure you have the following installed on your machine:
     npm start
     ```
 
+## API Endpoints
+
+- `GET /todos` - Get all to-do items
+- `POST /todos` - Create a new to-do item
+- `PUT /todos/:id` - Update a to-do item by ID
+- `DELETE /todos/:id` - Delete a to-do item by ID
