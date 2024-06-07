@@ -29,9 +29,6 @@ app.use(express.json());
 app.use("/api/posts", UserRouter);
 app.use("/api/tasks", taskrouter);
 //  middleware
-app.get("/", (req, res) => {
-  res.send("Nice");
-  });
   
   // error middleware
   app.use(ErrorMiddleware);
