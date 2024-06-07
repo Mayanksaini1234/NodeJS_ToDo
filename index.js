@@ -1,3 +1,4 @@
+import "server.js";
 import express from "express";
 import taskrouter from "./routes/task.js";
 import UserRouter from "./routes/user.js";
@@ -7,7 +8,7 @@ import cookieParser from "cookie-parser";
 import { ErrorMiddleware } from "./middlewares/error.js";
 import cors from "cors";
 env.config({
-  path: "./data/.env",
+  path: ".env",
 });
 
 export const app = express();
