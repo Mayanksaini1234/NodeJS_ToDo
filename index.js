@@ -2,7 +2,6 @@ import express from "express";
 import taskrouter from "./routes/task.js";
 import UserRouter from "./routes/user.js";
 import env from "dotenv";
-import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import { ErrorMiddleware } from "./middlewares/error.js";
 import cors from "cors";
@@ -22,15 +21,14 @@ app.use(cookieParser());
 app.use(cors({
   origin: "*", 
   // You may want to specify a particular origin for security reasons
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
 app.use("/api/posts", UserRouter);
 app.use("/api/tasks", taskrouter);
-//  middleware
+
   
   // error middleware
-  app.use(ErrorMiddleware);
+  // app.use(ErrorMiddleware);
   app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT} on the ${process.env.NODE_ENV} mode `);
   });
