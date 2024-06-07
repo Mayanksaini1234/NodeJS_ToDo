@@ -26,6 +26,12 @@ app.use(cors({
 app.use("/api/posts", UserRouter);
 app.use("/api/tasks", taskrouter);
 
+app.get("/", (req, res) => {
+  return res.status(200).send("Hello World!");
+})
+app.get("/api", (req, res) => {
+  return res.status(200).send("Hello World!");
+})
   
   // error middleware
   // app.use(ErrorMiddleware);
