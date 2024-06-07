@@ -6,6 +6,10 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import { ErrorMiddleware } from "./middlewares/error.js";
 import cors from "cors";
+import { connectDb } from "./data/database.js";
+
+connectDb();
+
 env.config({
   path: ".env",
   });
@@ -31,4 +35,7 @@ app.get("/", (req, res) => {
   
   // error middleware
   app.use(ErrorMiddleware);
-  import "./server.js";
+  app.listen(process.env.PORT, () => {
+    console.log(`Listening on port ${process.env.PORT} on the ${process.env.NODE_ENV} mode `);
+  });
+  
