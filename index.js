@@ -23,8 +23,8 @@ app.use(cors({
 // make sure we use it before specifying Router
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/posts", UserRouter);
-app.use("/tasks", taskrouter);
+app.use("/api/posts", UserRouter);
+app.use("/api/tasks", taskrouter);
 //  middleware
 app.get("/", (req, res) => {
   res.send("Nice");
