@@ -34,7 +34,7 @@ app.get("/api", (req, res) => {
 })
   
   // error middleware
-  // app.use(ErrorMiddleware);
+  app.use(ErrorMiddleware);
   app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT} on the ${process.env.NODE_ENV} mode `);
   });
