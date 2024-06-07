@@ -3,7 +3,7 @@ import taskrouter from "./routes/task.js";
 import UserRouter from "./routes/user.js";
 import env from "dotenv";
 import cookieParser from "cookie-parser";
-import { ErrorMiddleware } from "./middlewares/error.js";
+// import { ErrorMiddleware } from "./middlewares/error.js";
 import cors from "cors";
 import { connectDb } from "./data/database.js";
 
