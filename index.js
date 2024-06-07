@@ -1,4 +1,4 @@
-import "server.js";
+import "./server.js";
 import express from "express";
 import taskrouter from "./routes/task.js";
 import UserRouter from "./routes/user.js";
