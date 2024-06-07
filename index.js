@@ -15,17 +15,16 @@ env.config({
   });
   
   export const app = express();
-  app.use(express.urlencoded({ extended: true }));
-  app.use(cookieParser());
-  app.use(cors({
-    origin: "*",
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
-}
-));
-// make sure we use it before specifying Router
-app.use(bodyParser.urlencoded({ extended: true }));
+// Middleware setup
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(cors({
+  origin: "*", 
+  // You may want to specify a particular origin for security reasons
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
 app.use("/api/posts", UserRouter);
 app.use("/api/tasks", taskrouter);
 //  middleware
