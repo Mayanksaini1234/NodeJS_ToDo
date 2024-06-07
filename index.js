@@ -1,4 +1,3 @@
-import "./server.js";
 import express from "express";
 import taskrouter from "./routes/task.js";
 import UserRouter from "./routes/user.js";
@@ -9,14 +8,14 @@ import { ErrorMiddleware } from "./middlewares/error.js";
 import cors from "cors";
 env.config({
   path: ".env",
-});
-
-export const app = express();
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
-app.use(cors({
-  origin: "*",
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  });
+  
+  export const app = express();
+  app.use(express.urlencoded({ extended: true }));
+  app.use(cookieParser());
+  app.use(cors({
+    origin: "*",
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }
 ));
@@ -28,7 +27,8 @@ app.use("/api/tasks", taskrouter);
 //  middleware
 app.get("/", (req, res) => {
   res.send("Nice");
-});
-
-// error middleware
-app.use(ErrorMiddleware);
+  });
+  
+  // error middleware
+  app.use(ErrorMiddleware);
+  import "./server.js";
