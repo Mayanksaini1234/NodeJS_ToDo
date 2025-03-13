@@ -36,9 +36,14 @@ Make sure you have the following installed on your machine:
     npm start
     ```
 
-## API Endpoints
-
-- `GET /todos` - Get all to-do items
-- `POST /todos` - Create a new to-do item
-- `PUT /todos/:id` - Update a to-do item by ID
-- `DELETE /todos/:id` - Delete a to-do item by ID
+## API Endpoints <br>
+### TASK Endpoints -
+- `GET /api/tasks/todos` - Get all to-do tasks
+- `POST /api/tasks/todos` - Create a new to-do task
+- `PUT /api/tasks/todos/:id` - Update a to-do task by ID
+- `DELETE /api/tasks/todos/:id` - Delete a to-do task by ID <br>
+### TASK Endpoints -
+- `GET /api/users/me"` - Get my profile 
+- `POST /api/users/register` - Register new user
+- `POST /api/users/login` - Login  user
+- `POST /api/users/logout` - Logout user
