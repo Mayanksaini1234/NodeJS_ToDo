@@ -42,7 +42,7 @@ Make sure you have the following installed on your machine:
 - `POST /api/tasks/todos` - Create a new to-do task
 - `PUT /api/tasks/todos/:id` - Update a to-do task by ID
 - `DELETE /api/tasks/todos/:id` - Delete a to-do task by ID <br>
-### TASK Endpoints -
+### USERs Endpoints -
 - `GET /api/users/me"` - Get my profile 
 - `POST /api/users/register` - Register new user
 - `POST /api/users/login` - Login  user
